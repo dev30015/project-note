@@ -1,0 +1,10 @@
+New User:
+
+{
+    "username":"anderson",
+    "password":"andy",
+    "email":"andy@samsung.com.au",
+    "phoneNumber": "123",
+    "country": "China"
+}
+
