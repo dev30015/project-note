@@ -1,4 +1,4 @@
-package com.project.note.model;
+package com.project.note.dto;
 
 import lombok.Data;
 

@@ -39,6 +39,12 @@ public class Profile {
         this.language = language;
     }
 
+    public Profile(String country, String phoneNumber, String language) {
+        this.country = country;
+        this.phoneNumber = phoneNumber;
+        this.language = language;
+    }
+
     public User getUser() {
         return user;
     }
@@ -98,5 +104,17 @@ public class Profile {
     @Override
     public int hashCode() {
         return Objects.hash(profileID, profileImageLink, country, language);
+    }
+
+    @Override
+    public String toString() {
+        return "Profile{" +
+                "profileID=" + profileID +
+                ", profileImageLink='" + profileImageLink + '\'' +
+                ", country='" + country + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", language='" + language + '\'' +
+                ", user=" + user.getId() +
+                '}';
     }
 }

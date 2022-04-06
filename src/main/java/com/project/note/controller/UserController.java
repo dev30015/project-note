@@ -3,15 +3,13 @@ package com.project.note.controller;
 import com.project.note.entity.Profile;
 import com.project.note.entity.User;
 import com.project.note.exception.UserNotFoundException;
-import com.project.note.model.UserRegistration;
+import com.project.note.dto.UserRegistration;
 import com.project.note.repository.UserRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.NoSuchElementException;
 
 @RestController
 public class UserController {
@@ -37,6 +35,7 @@ public class UserController {
         return false;
     }
 
+    /*
     @GetMapping("/users/{id}/profile")
     Profile getUserProfile(@PathVariable Long id) {
         try {
@@ -45,6 +44,7 @@ public class UserController {
             throw new UserNotFoundException(String.valueOf(id));
         }
     }
+     */
 
     @PostMapping("/register")
     User registerUser(@RequestBody UserRegistration registrationUser) {
