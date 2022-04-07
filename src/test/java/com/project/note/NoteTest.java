@@ -10,6 +10,7 @@ import org.springframework.test.annotation.Rollback;
 
 import javax.annotation.Resource;
 import javax.transaction.Transactional;
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -110,6 +111,14 @@ public class NoteTest {
         void deleteNote() {
             noteRespo.deleteById(1L);
             for(Note note: noteRespo.findAll()) {
+                System.out.println(note);
+            }
+        }
+
+        @Test
+        void findNotesByUID() {
+            Collection<Note> notes = noteRespo.findNotesByUserId(1L);
+            for(Note note: notes) {
                 System.out.println(note);
             }
         }
