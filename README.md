@@ -1,22 +1,3 @@
-package com.project.note.controller;
-
-import com.project.note.dto.NotePayload;
-import com.project.note.entity.Note;
-import com.project.note.entity.User;
-import com.project.note.exception.NoteNotFoundException;
-import com.project.note.repository.NoteRepository;
-import com.project.note.repository.UserRepository;
-import com.project.note.service.NoteService;
-import org.springframework.beans.BeanUtils;
-import org.springframework.data.domain.Page;
-import org.springframework.security.access.annotation.Secured;
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.Calendar;
-import java.util.Collection;
-import java.util.Optional;
-
 @RestController
 public class NoteController {
 

@@ -24,7 +24,7 @@ import com.project.note.util.JwtUtil;
 
 
 @RestController
-public class HelloWorldController {
+public class AuthenticationController {
 
 	@Autowired
 	private AuthenticationManager authenticationManager;
