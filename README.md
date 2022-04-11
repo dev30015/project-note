@@ -1,3 +1,36 @@
+## Endpoints for User
+
+| Request Type  |URL   | Description |
+| ------------ | ------------ | ------------ |
+| POST| /register  | User registration |
+| GET| /users/{id}  | Retrieves user information |
+| PUT| /users/{id}  | Updates user information |
+| DELETE| /users/{id}  | Deletes a user |
+
+
+## Endpoints for Notes
+
+| Request Type  |URL   | Description |
+| ------------ | ------------ | ------------ |
+| POST| /authenticate  | Returns a JWT upon sucessfully authentication |
+| GET| /users/{id}/notes  | Retrieves notes of an authenticate user |
+| POST| /users/{id}/notes  | Creates a new note by an authenticated user |
+| GET| /users/{id}/notes/{noteId} | Retrieves a particular note by an authenticated user |
+| PUT| /users/{id}/notes/{noteId} | Updates a particular by an authenticated user |
+| DELETE| /users/{id}/notes/{noteId}| Deletes a particular note by an authenticated user
+
+## Endpoints for Profile
+| Request Type  |URL   | Description |
+| ------------ | ------------ | ------------ |
+| GET| /users/{id}/profile  | Retrieves user profile information |
+| PUT| /users/{id}/notes  | Updates user profile information |
+
+## Sample codes
+<details>
+  <summary>Click to show Note Controller Code</summary>
+  
+  
+```java
 @RestController
 public class NoteController {
 
@@ -95,3 +128,5 @@ public class NoteController {
         return notesWithPagination;
     }
 }
+```
+</details>
